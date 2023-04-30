@@ -1,3 +1,134 @@
-.btn:hover{
+/* Light mode */
+.App {
+  background-color: #f2f2f2;
+  color: #333;
+  transition: all 0.3s;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Switch */
+.switch {
+  display: none;
+}
+
+.switch + label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+}
+
+.switch + label:before,
+.switch + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+.switch + label:before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+.switch:checked + label:before {
+  background-color: #4caf50;
+}
+
+.switch + label:after {
+  left: 2px;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 0.3s;
+}
+
+.switch:checked + label:after {
+  transform: translateX(26px);
+  background-color: #fff;
+}
+
+/* UserDetails component styles */
+.user-details-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.user-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.user-details h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.user-details p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-list-item {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Dark mode */
+.App.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+.App.dark-mode h1 {
+  color: #fff;
+}
+.App.dark-mode .user-details p {
+  color: #000;
+}
+
+.btn:hover {
   background-color: rgb(88, 226, 88);
+}
+
+.ant-pagination {
+  justify-content: center;
 }
